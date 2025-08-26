@@ -10,7 +10,7 @@
 // combosやmacrosと同じ階層に以下のbihaviorsを追記
 // スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替えてください
 
-    behaviors {
+behaviors {
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
@@ -101,37 +101,33 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
-    keymap {
+    
+macros {};
+
+behaviors {};
+keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E           &kp R       &kp T                                         &kp Y          &kp U  &lt 5 I    &kp O      &kp P
-&kp A      &kp S         &kp D           &kp F       &kp G        &mkp MB3          &kp MINUS      &kp H          &kp J  &kp K      &kp L      &kp DEL
-&kp Z      &kp X         &kp C           &kp V       &kp B        &kp LEFT_ALT      &kp SEMICOLON  &kp N          &kp M  &kp MINUS  &kp EQUAL  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp ESCAPE  &lt 1 SPACE  &mo 2             &kp ENTER      &kp BACKSPACE                               &mo 6
-            >;
+&kp Q      &kp W         &kp E           &kp R       &kp T                                         &kp Y          &kp U  &lt 5 I    &kp O       &kp P
+&kp A      &kp S         &kp D           &kp F       &kp G        &mkp MB3          &kp MINUS      &kp H          &kp J  &kp K      &kp L       &kp DEL
+&kp Z      &kp X         &kp C           &kp V       &kp B        &kp LEFT_ALT      &kp SEMICOLON  &kp N          &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp ESCAPE  &lt 1 SPACE  &mo 2             &kp ENTER      &kp BACKSPACE                                &mo 6
+>;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_0                                            &trans
-            >;
+&trans  &trans  &trans  &trans  &trans                                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp MINUS      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp EQUAL      &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &kp KP_NUMBER_0  &kp KP_NUMBER_0                                            &trans
+>;
         };
 
         NUM {
@@ -140,7 +136,7 @@
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN    &kp AMPERSAND  &trans
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans  &kp LESS_THAN         &kp GREATER_THAN       &kp SEMICOLON  &kp SQT        &trans
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                     &trans
-            >;
+>;
         };
 
         ARROW {
@@ -149,7 +145,7 @@
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
-            >;
+>;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
@@ -160,7 +156,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
-            >;
+>;
         };
 
         SCROLL {
@@ -169,7 +165,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
+>;
         };
 
         layer_6 {
@@ -178,7 +174,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR      &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans                                                  &trans
-            >;
+>;
         };
     };
 };
