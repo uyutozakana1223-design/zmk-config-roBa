@@ -106,10 +106,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans    &kp UP_ARROW
-&trans  &trans  &trans  &trans  &trans  &trans         &kp LC(P)        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &kp LEFT  &kp RIGHT
-&trans  &trans  &trans  &trans  &trans  &trans         &kp EXCLAMATION  &trans                &trans                 &trans  &trans    &kp DOWN
-&trans  &trans  &trans  &trans  &trans  &kp LANG5      &kp DELETE       &kp LANG4                                                      &trans
+&trans  &trans  &trans  &trans  &trans                                                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans    &kp UP_ARROW
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp LC(P)        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &kp LEFT  &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp EXCLAMATION  &trans                &trans                 &trans  &trans    &kp DOWN
+&trans  &trans  &trans  &trans  &trans  &kp LANG_ZENKAKUHANKAKU      &kp DELETE       &kp LANG_HIRAGANA                                              &trans
             >;
         };
 
