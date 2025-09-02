@@ -70,16 +70,14 @@
         COPY: COPY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&macro_press>, <&kp ENTER>;
-
+            bindings = <&kp C &kp ENTER>;
             label = "COPY";
         };
 
         MOVE: MOVE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp M>, <&macro_press>, <&kp ENTER>;
-
+            bindings = <&kp M &kp ENTER>;
             label = "MOVE";
         };
     };
