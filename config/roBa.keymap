@@ -67,14 +67,14 @@
             label = "TO_LAYER_0";
         };
 
-        COPY: COPY {
+        CO: COPY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp C &kp ENTER>;
             label = "COPY";
         };
 
-        MOVE: MOVE {
+        MO: MOVE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp M &kp ENTER>;
@@ -150,7 +150,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &COPY   &MOVE                               &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &CO     &MO                                 &trans
             >;
         };
 
