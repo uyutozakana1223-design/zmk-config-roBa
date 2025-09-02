@@ -77,8 +77,15 @@
         CO: CO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp ENTER>;
+            bindings = <&kp C &kp O &kp ENTER>;
             label = "CO";
+        };
+
+        zero: zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0 &kp ENTER>;
+            label = "ZERO";
         };
     };
 
@@ -127,10 +134,10 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_0                                            &trans
+&trans  &trans  &trans  &trans  &trans                          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp PERIOD  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &zero       &kp KP_NUMBER_0                                            &trans
             >;
         };
 
