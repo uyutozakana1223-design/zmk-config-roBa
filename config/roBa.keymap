@@ -47,6 +47,11 @@
             bindings = <&mkp MB3>;
             key-positions = <20 21>;
         };
+
+        DE {
+            bindings = <&kp DELETE>;
+            key-positions = <41 19>;
+        };
     };
 
     macros {
@@ -108,10 +113,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans     &trans    &kp UP_ARROW
-&trans  &trans  &trans  &trans  &trans  &trans       &kp LG(LS(S))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &kp LEFT  &kp RIGHT
-&trans  &trans  &trans  &trans  &trans  &kp DEL      &kp LC(P)      &kp MINUS             &kp EQUAL              &kp SLASH  &trans    &kp DOWN
-&trans  &trans  &trans  &trans  &trans  &trans       &trans         &trans                                                            &trans
+&trans  &trans  &trans  &trans  &trans                             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans     &trans    &kp UP_ARROW
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(LS(S))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &kp LEFT  &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(P)      &kp MINUS             &kp EQUAL              &kp SLASH  &trans    &kp DOWN
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                                            &trans
             >;
         };
 
